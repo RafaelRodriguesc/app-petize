@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.wrapper {
+  width: 13%;
+  height: 75px;
+  margin: 20px 100px;
+}
+
+.boxLeft {
+  float: left;
+  color: #0069ca;
+}
+
+.boxRight {
+  float: right;
+  color: #8c19d2;
+}
+
+h1 {
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.search-box {
+  width: 40%;
+  float: right;
+}
+
+.format-input {
+  border-left: none;
+  font-size: 25px;
+  height: 60px;
+  }
+.format-input:hover {
+  border-left: none;
+  font-size: 25px;
+  height: 60px;
+  border: 3px solid #8c19d2;
+  }
+

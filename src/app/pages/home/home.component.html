@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="box-left">
+      <h1>Search</h1>
+    </div>
+    <div class="box-right">
+      <h1>d_evs</h1>
+    </div>
+  </div>
+  <div class="search-box">
+    <div class="input-group mb-3">
+      <span style="background: none; font-size: 20px;" class="input-group-text" id="basic-addon1"><i
+          class="bi bi-search"></i></span>
+      <input type="text" class="form-control format-input" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="username">
+    </div>
+    <button type="button" class="btn btn-lg botao" (click)="searchUser()">
+      Search
+    </button>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+.wrapper {
+  width: 780px;
+  height: 150px;
+  margin: 175px auto;
+}
+
+.box-left {
+  float: left;
+  color: #0069ca;
+
+}
+
+.box-right {
+  float: right;
+  color: #8c19d2;
+}
+
+h1 {
+  font-size: 124px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  width: 70%;
+  margin: -100px auto;
+}
+
+.botao {
+ width: 200px;
+ height: 60px;
+ background-color: #8c19d2;
+ color: white;
+ font-weight: bold;
+ margin-left: 20px;
+}
+
+.botao:hover {
+ width: 200px;
+ height: 60px;
+ background-color: #2c7a7b;
+ color: white;
+ font-weight: bold;
+ margin-left: 20px;
+}
+
+.format-input {
+border-left: none;
+font-size: 25px;
+height: 60px;
+}

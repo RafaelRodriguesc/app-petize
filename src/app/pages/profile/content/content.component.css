@@ -1,0 +1,45 @@
+.content {
+  width: 90%;
+  display: flex;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.perfil {
+  width: 20%;
+}
+
+.repositorios {
+  width: 79%;
+  margin-left: 5%;
+}
+
+.imagem {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.foto {
+  display: flex;
+  flex-direction: row;
+}
+
+.botao {
+  width: 90%;
+  height: 60px;
+  background-color: #8c19d2;
+  color: white;
+  font-weight: bold;
+  margin-top: 50px;
+ }
+
+ .botao:hover {
+  width:  90%;
+  height: 60px;
+  background-color: #2c7a7b;
+  color: white;
+  font-weight: bold;
+  margin-top: 50px;
+ }
