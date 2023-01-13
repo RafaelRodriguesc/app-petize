@@ -2,25 +2,25 @@
 <div class="content">
   <div class="perfil">
     <div class="foto">
-      <img class="imagem" src="https://images.pexels.com/photos/2328141/pexels-photo-2328141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      <img class="imagem" [src]="avatar_url" alt="">
       <div>
-        <h2>Name</h2>
-        <p>@name</p>
+        <h2>{{ nome }}</h2>
+        <p>@{{ dados }}</p>
       </div>
     </div>
     <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut nisl laoreet, posuere magna eget, vestibulum
       dui. Sed bibendum aliquet metus sit amet mattis. Etiam ut mollis leo. Donec maximus, ligula et iaculis tincidunt,
       odio justo fermentum tortor, id eleifend enim diam in purus. Fusce id gravida tortor.</p>
 
-    <p><i class="bi bi-people"></i> - Seguidores</p>
-    <p><i class="bi bi-heart"></i> - Seguindp</p>
-    <p><i class="bi bi-building"></i> - Petize</p>
-    <p><i class="bi bi-geo-alt"></i>- São Paulo</p>
-    <p><i class="bi bi-envelope"></i>- email</p>
-    <p><i class="bi bi-link-45deg"></i> - link web site</p>
-    <p><i class="bi bi-twitter"></i> - perfil</p>
+    <p><i class="bi bi-people"></i> - {{ seguidores }} Seguidores</p>
+    <p><i class="bi bi-heart"></i> - {{ seguindo }} Seguindo</p>
+    <p><i class="bi bi-building"></i> - {{ empresa }}</p>
+    <p><i class="bi bi-geo-alt"></i> - {{ localizacao }}</p>
+    <p><i class="bi bi-envelope"></i> - {{ email }}</p>
+    <p><i class="bi bi-link-45deg"></i> -{{ blog }} </p>
+    <p><i class="bi bi-twitter"></i> - {{ twitter }}</p>
 
-    <button type="button" class="btn btn-lg botao">
+    <button type="button" class="btn btn-lg botao" (click)="goBack()">
       Voltar
     </button>
   </div>

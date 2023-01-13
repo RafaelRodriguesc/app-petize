@@ -5,9 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './pages/profile/header/header.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'content', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'header', component: HeaderComponent },
   { path: 'content', component: ContentComponent }
 ];
 

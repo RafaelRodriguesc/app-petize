@@ -16,5 +16,6 @@
     <button type="button" class="btn btn-lg botao" (click)="searchUser()">
       Search
     </button>
+    <small *ngIf="error">Usuario não encontrado no GitHub</small>
   </div>
 </div>
