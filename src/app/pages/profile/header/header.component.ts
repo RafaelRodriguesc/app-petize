@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
 
     this.nome = this.usuario
-    console.log('his', this.nome)
   }
 
 }

@@ -20,6 +20,7 @@ export class ContentComponent implements OnInit {
   email: string = ''
   blog: string = ''
   twitter: string = ''
+  bio: string = ''
   avatar_url: any;
 
   constructor(
@@ -51,11 +52,11 @@ export class ContentComponent implements OnInit {
       this.localizacao = result.location
       this.email = result.email
       this.blog = result.blog
+      this.bio = result.bio
       this.twitter = result.twitter_username
 
     },
     (err) => {
-      console.log(err);
       if(err.ok === false) {
         // this.error = true
         setTimeout( () => {

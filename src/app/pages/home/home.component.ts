@@ -21,9 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   searchUser() : void {
-    console.log("username: ", this.username)
     this.apiGit.loadUser(this.username).subscribe( (result) => {
-      console.log(result.name)
       const params = result.name
 
       this.route.navigate(['content'], { queryParams: { username: this.username } })
@@ -38,6 +36,5 @@ export class HomeComponent implements OnInit {
         }, 3000)
       }
     });
-    // this.apiGit.loadRepositories(this.username).subscribe( (result: string) => console.log("repositorios", result))
   }
 }
