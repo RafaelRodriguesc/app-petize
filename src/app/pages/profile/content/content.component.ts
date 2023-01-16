@@ -10,6 +10,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ContentComponent implements OnInit {
 
   dados: any;
+  repos: any[] = []
+
   nome: string = ''
   seguidores: number = 0
   seguindo: number = 0
@@ -24,7 +26,9 @@ export class ContentComponent implements OnInit {
     private router: Router,
     private activateRoute: ActivatedRoute,
     private apiGit: GithubService
-  ) { }
+  ) {
+    this.dados = this.activateRoute.snapshot.queryParamMap.get('username')
+   }
 
   ngOnInit(): void {
     this.dados = this.activateRoute.snapshot.queryParamMap.get('username')
@@ -37,7 +41,6 @@ export class ContentComponent implements OnInit {
     this.router.navigate(['home'])
   }
   searchUser() : void {
-    console.log("username: ", this.dados)
     this.apiGit.loadUser(this.dados).subscribe( (result: any) => {
       console.log("Content: ", result)
       this.nome = result.name
@@ -67,6 +70,16 @@ export class ContentComponent implements OnInit {
   searchRepos() {
     this.apiGit.loadRepositories(this.dados).subscribe(result => {
       console.log("Content Repositorios", result)
+      this.repos = result
+      this.repos = this.repos.sort((a, b) => {
+        if (a.stargazers_count > b.stargazers_count) {
+          return -1;
+        }
+        if (a.stargazers_count < b.stargazers_count) {
+          return 1;
+        }
+        return 0;
+      })
     },
     (err) => {
       console.log(err);

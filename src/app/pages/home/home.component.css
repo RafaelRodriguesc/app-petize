@@ -51,3 +51,7 @@ border-left: none;
 font-size: 25px;
 height: 60px;
 }
+.home {
+  display: flex;
+  flex-direction: column;
+}

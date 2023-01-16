@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [usuario]="dados"></app-header>
 <div class="content">
   <div class="perfil">
     <div class="foto">
@@ -14,11 +14,11 @@
 
     <p><i class="bi bi-people"></i> - {{ seguidores }} Seguidores</p>
     <p><i class="bi bi-heart"></i> - {{ seguindo }} Seguindo</p>
-    <p><i class="bi bi-building"></i> - {{ empresa }}</p>
-    <p><i class="bi bi-geo-alt"></i> - {{ localizacao }}</p>
-    <p><i class="bi bi-envelope"></i> - {{ email }}</p>
-    <p><i class="bi bi-link-45deg"></i> -{{ blog }} </p>
-    <p><i class="bi bi-twitter"></i> - {{ twitter }}</p>
+    <p *ngIf="empresa"><i class="bi bi-building"></i> - {{ empresa }}</p>
+    <p *ngIf="localizacao"><i class="bi bi-geo-alt"></i> - {{ localizacao }}</p>
+    <p *ngIf="email"><i class="bi bi-envelope"></i> - {{ email }}</p>
+    <p *ngIf="blog"><i class="bi bi-link-45deg"></i> - <a href="{{ blog }}" target="_blank">{{ blog }} </a></p>
+    <p *ngIf="twitter"><i class="bi bi-twitter"></i> - <a href="{{ 'https://www.twitter.com/' + twitter }}" target="_blank">{{ twitter }}</a></p>
 
     <button type="button" class="btn btn-lg botao" (click)="goBack()">
       Voltar
@@ -26,16 +26,12 @@
   </div>
 
   <div class="repositorios">
-    <h3>Repositórios</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut nisl laoreet, posuere magna eget, vestibulum
-      dui. Sed bibendum aliquet metus sit amet mattis. Etiam ut mollis leo. Donec maximus, ligula et iaculis tincidunt,
-      odio justo fermentum tortor, id eleifend enim diam in purus. Fusce id gravida tortor. Vestibulum vel viverra
-      ipsum. Cras massa enim, sodales sed magna ac, gravida facilisis arcu. Duis elementum mauris tempus risus ornare,
-      et tempus mi bibendum. Vivamus a vehicula ante. Mauris quis blandit felis. Vivamus sed gravida mi, nec volutpat
-      dui. Sed vel laoreet elit. In suscipit nisl at sem interdum, vel rhoncus urna posuere. In hac habitasse platea
-      dictumst.</p>
-      <p><i class="bi bi-star"></i> - texto bullet atualizado ha x dias</p>
-    <hr>
+    <div *ngFor="let repo of repos">
+       <a href="{{repo.clone_url}}" target="_blank"><h3>{{ repo.name }}</h3></a>
+      <p>{{ repo.description }}</p>
+        <p><i class="bi bi-star"></i> - {{ repo.stargazers_count }} <i class="bi bi-dot"></i> atualizado ha {{ repo.stargazers_count }} dias</p>
+      <hr>
+    </div>
   </div>
 
 

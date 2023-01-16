@@ -1,27 +1,37 @@
 # AppPetize
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+Este projeto foi gerado utilizando o framework e pode ser baixado nesta url [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
-## Development server
+Para a instalação deste framework, é necessario a instalação prévia do [NodeJS](https://nodejs.org/download/release/v16.14.0/) versão 16.14.0 ou superior ou utilizar o gerenciador de pacotes node chamado [NVM](https://github.com/coreybutler/nvm-windows/releases/download/1.1.10/nvm-setup.exe)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Baixando o projeto do GITHUB e instalando as dependencias
 
-## Code scaffolding
+O Projeto AppPetize pode ser baixado através do link disponibilizado no endereco abaixo:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<https://github.com/RafaelRodriguesc/app-petize>
 
-## Build
+Após baixado/clonado, favor executar o seguinte comando dentro da pasta do projeto para instalação das dependencias:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+npm i
+## Servidor de desenvolvimento
 
-## Running unit tests
+Execute `ng serve` ou `npm start` para executar o projeto em modo de desenvolvedor. Navegue em `http://localhost:4200/` em qualquer browser para verificar o projeto em execução. Toda alteração feita será refletida no browser automaticamente.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Build 
 
-## Running end-to-end tests
+Execute `ng build` ou `npm run build` para gerar o pacote executavel do projeto. Os arquivos correspondentes a esse build serão gerados na pasta `dist/`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Versao atual
 
-## Further help
+Esta versão é a v1.0.0.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Criador
+
+** Rafael Rodrigues de Carvalho **
+
+- <https://github.com/RafaelRodriguesc>
+
+Para reduzir o tempo de desenvolvimento utilizei a lib `Bootstrap`, que oferece diversos templates gratuitos que podem ser facilmente aplicados em uma página, além disso é possível desenvolver o seu próprio template conforme a necessidade da aplicação. Também podemos personalizá-lo para utilizar apenas os componentes necessários para a página.
+
+
